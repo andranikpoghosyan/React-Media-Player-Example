@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SongList from "./components/SongList";
+import SongList from "./components/SongList/SongList";
 import "./App.scss";
 
 const App = () => {

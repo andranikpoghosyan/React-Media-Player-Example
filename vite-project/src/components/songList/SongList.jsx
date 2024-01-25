@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
-import SongRow from "./songRow/SongRow";
-import PlayAllButton from "./playAllButton/PlayAllButton";
-import AddAllButton from "./addAllButton/AddAllButton";
+import SongRow from "../songRow/SongRow";
+import PlayAllButton from "../playAllButton/PlayAllButton";
+import AddAllButton from "../addAllButton/AddAllButton";
+import MusicUploadForm from "../musicUploadForm/MusicUploadForm";
 import "./SongList.scss";
 
 const initialSongs = [
@@ -97,7 +98,11 @@ const SongList = () => {
         <AddAllButton />
       </div>
 
-      <div className="chooseFiles">
+      <MusicUploadForm
+        fileInputRef={fileInputRef}
+        addAudioFile={addAudioFile}
+      />
+      {/* <div className="chooseFiles">
         <input type="file" accept="audio/*" ref={fileInputRef} multiple />
 
         <div className="buttonBody">
@@ -108,7 +113,7 @@ const SongList = () => {
             </span>
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
